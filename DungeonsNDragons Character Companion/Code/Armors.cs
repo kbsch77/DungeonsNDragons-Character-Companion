@@ -1,4 +1,4 @@
-class Armors : Gear
+internal class Armors : Gear
 {
     private string _armorName;
     private string _armorType;
@@ -20,23 +20,23 @@ class Armors : Gear
         SetWeight(info[5]);
     }
 
-    public string GetArmorInfo ()
+    public string GetArmorInfo()
     {
         string armorInfo = (_armorName + ", " + _armorType + ", AC +" + _armorClassBonus + ", " + "Strength of " + _streangthRequirement + " required");
-        
-        if(_stealthDisadvantage)
+
+        if (_stealthDisadvantage)
         {
             armorInfo = armorInfo + (", Stealth Disadvantage");
         }
 
         return armorInfo;
     }
-    public override  string GetArmor(string armor)
+    public override string GetArmor(string armor)
     {
 
         return armor;
     }
-    public override string GetWeapon (string weapon)
+    public override string GetWeapon(string weapon)
     {
         return weapon;
     }

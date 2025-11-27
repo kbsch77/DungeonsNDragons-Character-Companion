@@ -1,4 +1,4 @@
-class MeleeWeapons : Weapons
+internal class MeleeWeapons : Weapons
 {
     public MeleeWeapons(string name)
     {
@@ -17,14 +17,14 @@ class MeleeWeapons : Weapons
         SetAttributes(attributes);
     }
 
-    public override string GetWeaponInfo ()
+    public override string GetWeaponInfo()
     {
         string weaponInfo = (GetWeaponName() + ", " + GetDamageDice() + " " + GetDamageType());
 
         List<string> attributes = GetAttributes();
-        foreach(string attribute in attributes)
+        foreach (string attribute in attributes)
         {
-            if(attribute != "n/a")
+            if (attribute != "n/a")
             {
                 weaponInfo = weaponInfo + (", " + attribute);
             }
@@ -32,12 +32,12 @@ class MeleeWeapons : Weapons
 
         return weaponInfo;
     }
-    public override string GetWeapon (string weapon)
+    public override string GetWeapon(string weapon)
     {
 
         return weapon;
     }
-        public override  string GetArmor(string armor)
+    public override string GetArmor(string armor)
     {
         return armor;
     }
