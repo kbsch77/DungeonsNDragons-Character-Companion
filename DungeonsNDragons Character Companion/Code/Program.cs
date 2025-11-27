@@ -2,7 +2,7 @@
 
 internal class Program
 {
-    static void Main(string[] args)
+    static void MainTest(string[] args)
     {
         Character playerCharacter = new Character("placeholder");
         Gear gear = new Gear();
