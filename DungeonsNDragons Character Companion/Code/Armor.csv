@@ -1,0 +1,14 @@
+Armor,Armor Type, Cost, Modifyer, Strength Requirement, Stealth Effect, Weight
+Padded,Light Armor,5 gp,11 + Dex modifier,0,Disadvantage,8 lb.
+Leather,Light Armor,10 gp,11 + Dex modifier,0,N/A,10 lb.
+Studded leather,Light Armor,45 gp,	12 + Dex modifier,0,N/A,13 lb.
+Hide,Medium Armor,10 gp,12 + Dex modifier (max 2),0,N/A,12 lb.
+Chain shirt,Medium Armor,50 gp,13 + Dex modifier (max 2),0,N/A,20 lb.
+Scale mail,Medium Armor,50 gp,14 + Dex modifier (max 2),0,Disadvantage,45 lb.
+Breastplate,Medium Armor,400 gp,14 + Dex modifier (max 2),0,N/A,20 lb.
+Half plate,Medium Armor,750 gp,15 + Dex modifier (max 2),0,Disadvantage,40 lb.
+Ring mail,Heavy Armor,30 gp,14,0,Disadvantage,40 lb.
+Chain mail,Heavy Armor,75 gp,16,13,Disadvantage,55 lb.
+Splint,Heavy Armor,200 gp,17,15,Disadvantage,60 lb.
+Plate,Heavy Armor,1,500 gp,18,15,Disadvantage,65 lb.
+Shield,Shield,10 gp,+2,0,N/A,6 lb.
