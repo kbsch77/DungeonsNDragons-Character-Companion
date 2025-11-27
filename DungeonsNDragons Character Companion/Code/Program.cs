@@ -1,8 +1,8 @@
 ﻿using System;
 
-class Program
+internal class Program
 {
-    static void Main(string[] args)
+    static void MainTest(string[] args)
     {
         Character playerCharacter = new Character("placeholder");
         Gear gear = new Gear();
@@ -34,7 +34,7 @@ class Program
             playerChoice = Console.ReadLine();
 
             //Loads a previously made Character
-            if(playerChoice.ToUpper() == "L")
+            if (playerChoice.ToUpper() == "L")
             {
                 Console.Write("Enter the character's name: ");
                 characterName = Console.ReadLine();
@@ -43,7 +43,7 @@ class Program
                 endLoop = true;
             }
 
-            else if(playerChoice.ToUpper() == "N")
+            else if (playerChoice.ToUpper() == "N")
             {
                 Console.Write("What is your new character's name? ");
                 characterName = Console.ReadLine();
@@ -55,13 +55,13 @@ class Program
                 do
                 {
                     //Roll for Stats option
-                    if(playerChoice.ToUpper() == "R")
+                    if (playerChoice.ToUpper() == "R")
                     {
                         playerCharacter = new Character(characterName);
                     }
 
                     //Manual entry for Stats option
-                    else if(playerChoice.ToUpper() == "M")
+                    else if (playerChoice.ToUpper() == "M")
                     {
                         Console.WriteLine("Strength is your ability to crush a tomato.");
                         Console.Write("Enter your strength (min 1 - max 20):");
@@ -103,13 +103,13 @@ class Program
                         Console.Write("Enter 'R' for rolled (suggested) or 'M' for manual: ");
                         playerChoice = Console.ReadLine();
                     }
-                }while(endLoop);
+                } while (endLoop);
             }
 
             //For User Error
             else Console.WriteLine("Please enter in either 'L' or 'N'.");
 
-        }while(endLoop);
+        } while (endLoop);
         endLoop = false;
         Console.Clear();
 
@@ -135,7 +135,7 @@ class Program
             Console.WriteLine();
 
             //Adds Equipment to a Character with Gear
-            if(playerChoice == "1")
+            if (playerChoice == "1")
             {
                 string playerEquiptChoice;
                 string equipment;
@@ -150,98 +150,98 @@ class Program
                     playerEquiptChoice = Console.ReadLine();
 
                     //New Melee Weapon
-                    if(playerEquiptChoice == "1")
+                    if (playerEquiptChoice == "1")
                     {
                         Console.WriteLine();
-                        foreach(KeyValuePair<string, List<string>> weaponOption in gear.GetMeleeWeapons())
+                        foreach (KeyValuePair<string, List<string>> weaponOption in gear.GetMeleeWeapons())
                             Console.WriteLine("{0}", weaponOption.Key);
-                        
+
                         Console.Write("Enter your melee weapon: ");
                         equipment = Console.ReadLine();
 
-                        if(gear.GetMeleeWeapons().ContainsKey(equipment))
+                        if (gear.GetMeleeWeapons().ContainsKey(equipment))
                             playerCharacter = new EquippedCharacter(characterName, strength, dexterity, constitution, intelligence, wisdom, charisma, new MeleeWeapons(equipment));
-                    
+
                         else Console.WriteLine("Please enter a weapon from the list exactly as shown.");
 
                         endLoop = true;
                     }
 
                     //New Ranged Weapon
-                    else if(playerEquiptChoice == "2")
+                    else if (playerEquiptChoice == "2")
                     {
                         Console.WriteLine();
-                        foreach(KeyValuePair<string, List<string>> weaponOption in gear.GetRangedWeapons())
+                        foreach (KeyValuePair<string, List<string>> weaponOption in gear.GetRangedWeapons())
                             Console.WriteLine("{0}", weaponOption.Key);
 
                         Console.Write("Enter your ranged weapon: ");
                         equipment = Console.ReadLine();
 
-                        if(gear.GetRangedWeapons().ContainsKey(equipment))
+                        if (gear.GetRangedWeapons().ContainsKey(equipment))
                             playerCharacter = new EquippedCharacter(characterName, strength, dexterity, constitution, intelligence, wisdom, charisma, null, new RangedWeapons(equipment));
-                    
+
                         else Console.WriteLine("Please enter a weapon from the list exactly as shown.");
 
                         endLoop = true;
                     }
 
                     //New Armor
-                    else if(playerEquiptChoice == "3")
+                    else if (playerEquiptChoice == "3")
                     {
                         Console.WriteLine();
-                        foreach(KeyValuePair<string, List<string>> armorOption in gear.GetArmors())
+                        foreach (KeyValuePair<string, List<string>> armorOption in gear.GetArmors())
                             Console.WriteLine("{0}", armorOption.Key);
 
                         Console.Write("Enter your armor: ");
                         equipment = Console.ReadLine();
 
-                        if(gear.GetArmors().ContainsKey(equipment))
+                        if (gear.GetArmors().ContainsKey(equipment))
                             playerCharacter = new EquippedCharacter(characterName, strength, dexterity, constitution, intelligence, wisdom, charisma, null, null, new Armors(equipment));
-                    
+
                         else Console.WriteLine("Please enter an armor from the list exactly as shown.");
 
                         endLoop = true;
                     }
 
                     //New Melee Weapon, Ranged Weapon, and Armor
-                    else if(playerEquiptChoice == "4")
+                    else if (playerEquiptChoice == "4")
                     {
                         Console.WriteLine();
-                        foreach(KeyValuePair<string, List<string>> weaponOption in gear.GetMeleeWeapons())
+                        foreach (KeyValuePair<string, List<string>> weaponOption in gear.GetMeleeWeapons())
                             Console.WriteLine("{0}", weaponOption.Key);
-                        
+
                         Console.Write("Enter your melee weapon: ");
                         string melee = Console.ReadLine();
 
                         Console.WriteLine();
-                        foreach(KeyValuePair<string, List<string>> weaponOption in gear.GetRangedWeapons())
+                        foreach (KeyValuePair<string, List<string>> weaponOption in gear.GetRangedWeapons())
                             Console.WriteLine("{0}", weaponOption.Key);
 
                         Console.Write("Enter your ranged weapon: ");
                         string ranged = Console.ReadLine();
 
                         Console.WriteLine();
-                        foreach(KeyValuePair<string, List<string>> armorOption in gear.GetArmors())
+                        foreach (KeyValuePair<string, List<string>> armorOption in gear.GetArmors())
                             Console.WriteLine("{0}", armorOption.Key);
 
                         Console.Write("Enter your armor: ");
                         equipment = Console.ReadLine();
 
-                        if(gear.GetMeleeWeapons().ContainsKey(melee) && gear.GetRangedWeapons().ContainsKey(ranged) && gear.GetArmors().ContainsKey(equipment))
+                        if (gear.GetMeleeWeapons().ContainsKey(melee) && gear.GetRangedWeapons().ContainsKey(ranged) && gear.GetArmors().ContainsKey(equipment))
                             playerCharacter = new EquippedCharacter(characterName, strength, dexterity, constitution, intelligence, wisdom, charisma, new MeleeWeapons(melee), new RangedWeapons(ranged), new Armors(equipment));
-                    
+
                         else Console.WriteLine("Please enter equipment from the lists exactly as shown.");
 
                         endLoop = true;
                     }
 
                     else Console.WriteLine("please enter a number from the menu.");
-                }while(!endLoop);
+                } while (!endLoop);
                 endLoop = false;
             }
 
             //Both Melee and Ranged Combat options
-            else if(playerChoice == "2")
+            else if (playerChoice == "2")
             {
                 Console.WriteLine("Are you engaging in melee or ranged combat?");
                 Console.WriteLine(" 1. Melee Combat");
@@ -252,7 +252,7 @@ class Program
                 do
                 {
                     //Melee Combat
-                    if(combatChoice != "1")
+                    if (combatChoice != "1")
                     {
                         fight = new MeleeCombat();
                         Weapons melee = playerCharacter.GetMeleeWeapon();
@@ -260,11 +260,11 @@ class Program
                     }
 
                     //Ranged Combat
-                    else if(combatChoice != "2")
+                    else if (combatChoice != "2")
                     {
                         fight = new RangedCombat();
                         RangedWeapons ranged = playerCharacter.GetRangedWeapon();
-                        if(ranged.GetAmmunitionAmmount() > 0)
+                        if (ranged.GetAmmunitionAmmount() > 0)
                         {
                             ranged.SetAmmunitionAmmount(fight.UseAmmunition(ranged.GetAmmunitionAmmount()));
                             fight.Attack(roller.AttackRoll(ranged.GetDamageDice()), ranged.GetWeaponName());
@@ -273,17 +273,17 @@ class Program
                     }
 
                     else Console.WriteLine("please enter a number from the menu.");
-                }while(combatChoice != "1" || combatChoice != "2");
+                } while (combatChoice != "1" || combatChoice != "2");
             }
 
             //Save Character and it's Equippment
-            else if(playerChoice == "3")
+            else if (playerChoice == "3")
             {
                 records.SaveCharacter(playerCharacter, characterName);
             }
 
             //Shows Character Information
-            else if(playerChoice == "4")
+            else if (playerChoice == "4")
             {
                 Console.WriteLine($"Name: {characterName}");
                 Console.WriteLine($"Level: {playerCharacter.GetLevel()}");
@@ -295,7 +295,7 @@ class Program
                 Console.WriteLine($"Charisma: {charisma}");
                 Console.WriteLine();
 
-                if(playerCharacter is EquippedCharacter)
+                if (playerCharacter is EquippedCharacter)
                 {
                     meleeWeapon = playerCharacter.GetMeleeWeapon();
                     rangedWeapon = playerCharacter.GetRangedWeapon();
@@ -312,20 +312,20 @@ class Program
             }
 
             //Quit
-            else if(playerChoice == "5")
+            else if (playerChoice == "5")
             {
                 Console.WriteLine("Thank You, plese come again!");
                 endLoop = true;
             }
 
             //For User Error
-            else 
+            else
             {
                 Console.WriteLine("Please enter a number from the Menu.");
                 Thread.Sleep(1000);
             }
 
             Console.Clear();
-        }while(!endLoop);
+        } while (!endLoop);
     }
 }

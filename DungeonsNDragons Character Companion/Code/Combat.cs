@@ -1,9 +1,9 @@
-abstract class Combat
+internal abstract class Combat
 {
     private int _enemyArmorClass;
 
-    public abstract void Attack (int attackRoll, string weapon);
-    public void Hit (string weapon, int damageRoll)
+    public abstract void Attack(int attackRoll, string weapon);
+    public void Hit(string weapon, int damageRoll)
     {
         Console.WriteLine("");
         Console.WriteLine();

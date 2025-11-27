@@ -1,4 +1,5 @@
-class DieRoller{
+internal class DieRoller
+{
     public int RollDice(int diceType)
     {
         Random rand = new Random();
@@ -6,7 +7,7 @@ class DieRoller{
         return roll;
     }
 
-        public int RollStat()
+    public int RollStat()
     {
         //rolls dice 4 times, but only the best 3 are used
         int roll1 = RollDice(6);
@@ -17,37 +18,37 @@ class DieRoller{
         int total = 0;
 
         //adds all but the lowest value
-        if(roll1 > roll2 || roll1 > roll3 || roll1 > roll4)
+        if (roll1 > roll2 || roll1 > roll3 || roll1 > roll4)
         {
             total += roll1;
             diceAdded += 1;
         }
-        if(roll2 > roll1 || roll2 > roll3 || roll2 > roll4)
+        if (roll2 > roll1 || roll2 > roll3 || roll2 > roll4)
         {
             total += roll2;
             diceAdded += 1;
         }
-        if(roll3 > roll2 || roll3 > roll1 || roll3 > roll4)
+        if (roll3 > roll2 || roll3 > roll1 || roll3 > roll4)
         {
             total += roll3;
             diceAdded += 1;
         }
-        if(roll4 > roll1 || roll4 > roll3 || roll4 > roll2)
+        if (roll4 > roll1 || roll4 > roll3 || roll4 > roll2)
         {
             total += roll4;
             diceAdded += 1;
         }
-            
-        if(diceAdded == 3)
+
+        if (diceAdded == 3)
             return total;
         //for the case of the lowest number being a tied
         else
-            while(diceAdded != 3)
+            while (diceAdded != 3)
             {
                 total += RollDice(6);
                 diceAdded += 1;
             }
-            return total;
+        return total;
     }
     public int AttackRoll(string diceInfo)
     {

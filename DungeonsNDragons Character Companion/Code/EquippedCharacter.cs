@@ -1,4 +1,4 @@
-class EquippedCharacter : Character
+internal class EquippedCharacter : Character
 {
     private MeleeWeapons _meleeWeapon;
     private RangedWeapons _rangedWeapon;
@@ -6,10 +6,10 @@ class EquippedCharacter : Character
     private bool _sheild;
     private bool _proficiency = false;
 
-    public EquippedCharacter 
-    (string name, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma, 
-        MeleeWeapons meleeWeapon = null, RangedWeapons rangedWeapon = null, Armors armor = null, bool sheild = false) 
-    : base (name, strength, dexterity, constitution, intelligence, wisdom, charisma)
+    public EquippedCharacter
+    (string name, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma,
+        MeleeWeapons meleeWeapon = null, RangedWeapons rangedWeapon = null, Armors armor = null, bool sheild = false)
+    : base(name, strength, dexterity, constitution, intelligence, wisdom, charisma)
     {
         SetName(name);
 

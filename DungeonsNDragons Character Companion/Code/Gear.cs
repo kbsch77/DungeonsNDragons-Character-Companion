@@ -1,4 +1,4 @@
-class Gear
+internal class Gear
 {
     private Dictionary<string, List<string>> _meleeWeapons = new Dictionary<string, List<string>>();
     private Dictionary<string, List<string>> _RangedWeapons = new Dictionary<string, List<string>>();
@@ -6,13 +6,14 @@ class Gear
     private string _weight;
     private string _cost;
 
-    public Gear(){
+    public Gear()
+    {
         SetArmors();
         SetMeleeWeapons();
         SetRangedWeapons();
     }
 
-    public virtual string GetWeapon (string weapon)
+    public virtual string GetWeapon(string weapon)
     {
         return null;
     }

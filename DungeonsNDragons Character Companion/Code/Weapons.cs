@@ -1,4 +1,4 @@
-abstract class Weapons : Gear
+internal abstract class Weapons : Gear
 {
     private string _damageType;
     private string _damageDice;
