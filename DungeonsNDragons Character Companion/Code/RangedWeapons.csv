@@ -1,0 +1,15 @@
+weapon, cost, damage, damage type, weight, thrown or loaded, range, max range, attribute 1, attribute 2, attribute 3
+Dagger,2 gp,1d4,piercing,1 lb.,Finesse,thrown,20,60,light,n/a
+Handaxe,5 gp,1d6,slashing,2 lb.,thrown,20,60,Light,n/a,n/a
+Javelin,5 sp,1d6,piercing,2 lb.,thrown,30,120,n/a,n/a,n/a
+Spear,1 gp,1d6,piercing,3 lb.,thrown,20,60, versatile (1d8),n/a,n/a
+Light crossbow,25 gp,1d8,piercing,5 lb.,Ammunition,80,320,loading,two-handed,n/a
+Dart,5 cp,1d4,piercing,1/4 lb.,thrown,20,60,Finesse,n/a,n/a
+Shortbow,25 gp,1d6,piercing,2 lb.,Ammunition,80,320,two-handed,n/a,n/a
+Sling,1 sp,1d4,bludgeoning,0 lb.,Ammunition,30,120,n/a,n/a,n/a
+Trident,5 gp,1d6,piercing,4 lb.,thrown,20,60,versatile (1d8),n/a,n/a
+Blowgun,10 gp,1,piercing,1 lb.,Ammunition,25,100,loading,n/a,n/a
+Hand crossbow,75 gp,1d6,piercing,3 lb.,Ammunition,30,120,light,loading,n/a
+Heavy crossbow,50 gp,1d10,piercing,18 lb.,Ammunition,100,400,heavy,loading,two-handed
+Longbow,50 gp,1d8,piercing,2 lb.,Ammunition,150,600,heavy,two-handed,n/a
+Net,1 gp,0d0,tangled,3 lb.,thrown,5,15,Special,n/a,n/a

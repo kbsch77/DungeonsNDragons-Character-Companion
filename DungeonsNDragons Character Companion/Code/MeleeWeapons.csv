@@ -1,0 +1,29 @@
+weapon, cost, damage, damage type, weight, attribute 1, attribute 2, attribute 3
+Club,1 sp,1d4,bludgeoning,2 lb.,Light,n/a,n/a
+Dagger,2 gp,1d4,piercing,1 lb.,Finesse,light,thrown (range 20/60)
+Greatclub,2 sp,1d8,bludgeoning,10 lb.,Two-handed,n/a,n/a
+Handaxe,5 gp,1d6,slashing,2 lb.,Light,thrown (range 20/60),n/a
+Javelin,5 sp,1d6,piercing,2 lb.,Thrown (range 30/120),n/a,n/a
+Light Hammer,2 gp,1d4,bludgeoning,2 lb.,Light,thrown (range 20/60),n/a
+Mace,5 gp,1d6,bludgeoning,4 lb.,n/a,n/a,n/a
+Quarterstaff,2 sp,1d6,bludgeoning,4 lb.,Versatile (1d8),n/a,n/a
+Sickle,1 gp,1d4,slashing,2 lb.,Light,n/a,n/a
+Spear,1 gp,1d6,piercing,3 lb.,Thrown (range 20/60),versatile (1d8),n/a
+Battleaxe,10 gp,1d8,slashing,4 lb.,Versatile (1d10),n/a,n/a
+Flail,10 gp,1d8,bludgeoning,2 lb.,n/a,n/a,n/a
+Glaive,20 gp,1d10,slashing,6 lb.,Heavy,reach,two-handed
+Greataxe,30 gp,1d12,slashing,7 lb.,Heavy,two-handed,n/a
+Greatsword,50 gp,2d6,slashing,6 lb.,Heavy,two-handed,n/a
+Halberd,20 gp,1d10,slashing,6 lb.,Heavy,reach,two-handed,n/a
+Lance,10 gp,1d12,piercing,6 lb.,Reach,special,n/a
+Longsword,15 gp,1d8,slashing,3 lb.,Versatile (1d10),n/a,n/a
+Maul,10 gp,2d6,bludgeoning,10 lb.,Heavy,two-handed,n/a
+Morningstar,15 gp,1d8,piercing,4 lb.,n/a,n/a,n/a
+Pike,5 gp,1d10,piercing,18 lb.,Heavy,reach,two-handed
+Rapier,25 gp,1d8,piercing,2 lb.,Finesse,n/a,n/a
+Scimitar,25 gp,1d6,slashing,3 lb.,Finesse,light,n/a
+Shortsword,10 gp,1d6,piercing,2 lb.,Finesse,light,n/a
+Trident,5 gp,1d6,piercing,4 lb.,Thrown (range 20/60),versatile (1d8),n/a
+War pick,5 gp,1d8,piercing,2 lb.,n/a,n/a,n/a
+Warhammer,15 gp,1d8,bludgeoning,2 lb.,Versatile (1d10),n/a,n/a
+Whip,2 gp,1d4,slashing,3 lb.,Finesse,reach,n/a
