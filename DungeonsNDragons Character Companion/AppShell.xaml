@@ -4,11 +4,16 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:DungeonsNDragons_Character_Companion"
-    Title="DungeonsNDragons_Character_Companion">
+    Title="DungeonsNDragons_Character_Companion"
+    Shell.FlyoutBehavior = "Flyout">
 
-    <ShellContent
+    <TabBar>
+        <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
+
+
+    </TabBar>
 
 </Shell>
