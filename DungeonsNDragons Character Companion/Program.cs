@@ -1,8 +1,8 @@
 ﻿using System;
 
-internal class Program
+internal class OldProgram
 {
-    static void MainTest(string[] args)
+    static void OldMain(string[] args)
     {
         Character playerCharacter = new Character("placeholder");
         Gear gear = new Gear();
