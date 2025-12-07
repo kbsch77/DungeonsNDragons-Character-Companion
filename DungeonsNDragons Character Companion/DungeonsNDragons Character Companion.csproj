@@ -69,13 +69,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Remove="CharacterPage.xaml" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <EmbeddedResource Include="CharacterPage.xaml">
-	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-	  </EmbeddedResource>
+	  <MauiXaml Remove="CharacterCreatorPage.xaml" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -84,9 +78,19 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="CharacterPage.xaml.cs">
-	    <DependentUpon>CharacterPage.xaml</DependentUpon>
+	  <Folder Include="ViewModel\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="View\MainPage.xaml.cs">
+	    <DependentUpon>MainPage.xaml</DependentUpon>
 	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="View\CharacterCreatorPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>
