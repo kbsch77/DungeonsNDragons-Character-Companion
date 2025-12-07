@@ -9,6 +9,7 @@ namespace DungeonsNDragons_Character_Companion
             InitializeComponent();
 
             Routing.RegisterRoute("CharacterCreatorPage", typeof(CharacterCreatorPage));
+            Routing.RegisterRoute("CharacterPage", typeof(CharacterPage));
         }
     }
 }
