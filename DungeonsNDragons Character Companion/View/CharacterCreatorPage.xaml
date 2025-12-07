@@ -2,10 +2,30 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DungeonsNDragons_Character_Companion.View.CharacterCreatorPage"
-             Title="CharacterCreatorPage">
+             Title="5e Character Creator">
     <VerticalStackLayout>
         <Label 
-            Text="5e Character Creator"
+            Text="Creation Meathod"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Button
+            Text="Roll for Stats" 
+            SemanticProperties.Hint="Automatically roll for Stats"
+            Clicked="OnRollForStatsClicked" />
+
+        <Button
+            Text="Point Buy Stats" 
+            SemanticProperties.Hint="Increase and decrease Stats based on point system (Currently Work in Progress)"
+            Clicked="OnPointBuyClicked" />
+
+        <Button
+            Text="Manuel Entry" 
+            SemanticProperties.Hint="Enter your points yourself"
+            Clicked="OnManuelClicked" />
+
+        <Label 
+            Text="Character Stats"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
     </VerticalStackLayout>
