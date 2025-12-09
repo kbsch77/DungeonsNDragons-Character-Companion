@@ -6,6 +6,8 @@ public partial class CharacterCreatorPage : ContentPage
 {
     Character playerCharacter = new Character("Test");
     string characterName = "";
+    string characterClass;
+    string characterbacground;
     int strength;
     int dexterity;
     int constitution;
@@ -23,40 +25,50 @@ public partial class CharacterCreatorPage : ContentPage
     }
     private void OnPointBuyClicked(object sender, EventArgs e)
     {
-        return;
+        //currently same as rolled stats, work in progress
+        playerCharacter = new Character(characterName);
     }
-    private void OnManuelClicked(object sender, EventArgs e)
+
+    // entry text changes
+    void OnEntryTextChanged(object sender, TextChangedEventArgs e)
     {
-        Console.WriteLine("Strength is your ability to crush a tomato.");
-        Console.Write("Enter your strength (min 1 - max 20):");
-        string playerStatChoice = Console.ReadLine();
-        strength = int.Parse(playerStatChoice);
+        string oldText = e.OldTextValue;
+        string newText = e.NewTextValue;
+        string myText = entry.Text;
+    }
 
-        Console.WriteLine("Dexterity is your ability to dodge a thrown tomato.");
-        Console.Write("Enter your dexterity (min 1 - max 20):");
-        playerStatChoice = Console.ReadLine();
-        dexterity = int.Parse(playerStatChoice);
+    //changes character's name
+    void NameChanged(object sender, EventArgs e)
+    {
+        string text = ((Entry)sender).Text;
+        characterName = text;
+        playerCharacter.SetName(characterName);
+    }
 
-        Console.WriteLine("Constitution is your ability to eat a rotten tomato.");
-        Console.Write("Enter your constitution (min 1 - max 20):");
-        playerStatChoice = Console.ReadLine();
-        constitution = int.Parse(playerStatChoice);
+    //picker index changes
+    void OnPickerSelectedIndexChanged(object sender, EventArgs e)
+    {
+        var picker = (Picker)sender;
+        int selectedIndex = picker.SelectedIndex;
 
-        Console.WriteLine("Intelligence is knowing that a tomato is a fruit.");
-        Console.Write("Enter your intelligence (min 1 - max 20):");
-        playerStatChoice = Console.ReadLine();
-        intelligence = int.Parse(playerStatChoice);
+        if (selectedIndex != -1)
+        {
+            if(picker.Title == "ClassPicker")
+            {
+                characterClass = picker.Items[selectedIndex];
+                playerCharacter.SetClass(characterClass);
+            }
+            else if(picker.Title == "BackgroundPicker")
+            {
+                characterbacground = picker.Items[selectedIndex];
+                playerCharacter.SetBackground(characterbacground);
+            }
+                
+        }
+    }
 
-        Console.WriteLine("Wisdom is knowing not to put a tomato in a fruit salad.");
-        Console.Write("Enter your wisdom (min 1 - max 20):");
-        playerStatChoice = Console.ReadLine();
-        wisdom = int.Parse(playerStatChoice);
-
-        Console.WriteLine("Charisma is your ability to sell a tomato based fruit salad.");
-        Console.Write("Enter your charisma (min 1 - max 20):");
-        playerStatChoice = Console.ReadLine();
-        charisma = int.Parse(playerStatChoice);
-
-        playerCharacter = new Character(characterName, strength, dexterity, constitution, intelligence, wisdom, charisma);
+    void OnEntryCompleted(object sender, EventArgs e)
+    {
+        string text = ((Entry)sender).Text;
     }
 }

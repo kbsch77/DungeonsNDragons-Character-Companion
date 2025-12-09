@@ -2,6 +2,8 @@
 
 internal class OldProgram
 {
+    // for referance and implamentation of older code, do not integrate this class itself
+    // (to be deleted when unneeded)
     static void OldMain(string[] args)
     {
         Character playerCharacter = new Character("placeholder");
