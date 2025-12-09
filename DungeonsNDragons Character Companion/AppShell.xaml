@@ -7,12 +7,20 @@
     Title="DungeonsNDragons_Character_Companion"
     Shell.FlyoutBehavior = "Flyout">
 
-    <TabBar>
+    <FlyoutItem>
         <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
-        Route="View/MainPage" />
+        FlyoutIcon="dotnet_bot.png"/>
+        <!--  Route="MainPage" -->
 
-    </TabBar>
+        <!--
+        <ShellContent
+        Title="5e Character Creator"
+        ContentTemplate="{DataTemplate local:CharacterCreationPage}"
+        Route="CharacterCreationPage" /> 
+        -->
+
+    </FlyoutItem>
 
 </Shell>
