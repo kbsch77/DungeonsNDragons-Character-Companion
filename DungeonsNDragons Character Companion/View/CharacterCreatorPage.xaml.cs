@@ -17,15 +17,15 @@ public partial class CharacterCreatorPage : ContentPage
 	{
 		InitializeComponent();
     }
-    private async void OnRollForStatsClicked(object sender, EventArgs e)
+    private void OnRollForStatsClicked(object sender, EventArgs e)
     {
         playerCharacter = new Character(characterName);
     }
-    private async void OnPointBuyClicked(object sender, EventArgs e)
+    private void OnPointBuyClicked(object sender, EventArgs e)
     {
         return;
     }
-    private async void OnManuelClicked(object sender, EventArgs e)
+    private void OnManuelClicked(object sender, EventArgs e)
     {
         Console.WriteLine("Strength is your ability to crush a tomato.");
         Console.Write("Enter your strength (min 1 - max 20):");

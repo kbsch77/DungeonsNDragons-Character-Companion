@@ -21,7 +21,7 @@
 
         <Button
             Text="Manuel Entry" 
-            SemanticProperties.Hint="Enter your points yourself"
+            SemanticProperties.Hint="Enter your points yourself (Currently Work in Progress)"
             Clicked="OnManuelClicked" />
 
         <Label 
