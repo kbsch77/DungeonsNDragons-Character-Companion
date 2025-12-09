@@ -21,11 +21,26 @@
 
         <Button
             Text="Manuel Entry" 
-            SemanticProperties.Hint="Enter your points yourself"
+            SemanticProperties.Hint="Enter your points yourself (Currently Work in Progress)"
             Clicked="OnManuelClicked" />
 
         <Label 
             Text="Character Stats"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label 
+            Text="Character Skills"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label 
+            Text="Character Class"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label 
+            Text="Character Background"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
     </VerticalStackLayout>

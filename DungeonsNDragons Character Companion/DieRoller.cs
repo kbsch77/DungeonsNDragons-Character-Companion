@@ -50,9 +50,38 @@ internal class DieRoller
             }
         return total;
     }
-    public int AttackRoll(string diceInfo)
+    //Abillity Check for Skill rolls, Saving throws, and Initiative
+    public int RollAbility(string rolltype = "")
     {
+        int rollOne= RollDice(20);
+        int rollTwo= RollDice(20);
 
-        return 0;
+        // Advantage roll
+        if (rolltype == "adv")
+            if (rollOne >= rollTwo)
+                return rollOne;
+            else
+                return rollTwo;
+
+        // Disadvantage roll
+        else if (rolltype == "dis")
+            if (rollOne >= rollTwo)
+                return rollTwo;
+            else
+                return rollOne;
+
+        // Normal roll
+        else
+            return rollOne;
+    }
+    //Roll to hit (work in progress)
+    public int AttackRoll(string diceInfo, int bonus = 0)
+    {
+        return RollDice(20) + bonus;
+    }
+    //Roll for Damage (work in progress)
+    public int DamageRoll(int diceInfo, int bonus = 0)
+    {
+        return RollDice(diceInfo) + bonus;
     }
 }
