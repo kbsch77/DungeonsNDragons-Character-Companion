@@ -37,6 +37,44 @@ public partial class CharacterCreatorPage : ContentPage
         string myText = entry.Text;
     }
 
+    // manuel stat changes
+    void OnStrCompleted(object sender, EventArgs e) //str
+    {
+        string text = ((Entry)sender).Text;
+        strength = int.Parse(text);
+        playerCharacter.SetStrength(strength);
+    }
+    void OnDexCompleted(object sender, EventArgs e) //dex
+    {
+        string text = ((Entry)sender).Text;
+        dexterity = int.Parse(text);
+        playerCharacter.SetDexterity(dexterity);
+    }
+    void OnConCompleted(object sender, EventArgs e) //con
+    {
+        string text = ((Entry)sender).Text;
+        constitution = int.Parse(text);
+        playerCharacter.SetConstitution(constitution);
+    }
+    void OnIntCompleted(object sender, EventArgs e) //int
+    {
+        string text = ((Entry)sender).Text;
+        intelligence = int.Parse(text);
+        playerCharacter.SetIntelligence(intelligence);
+    }
+    void OnWisCompleted(object sender, EventArgs e) //wis
+    {
+        string text = ((Entry)sender).Text;
+        wisdom = int.Parse(text);
+        playerCharacter.SetWisdom(wisdom);
+    }
+    void OnChaCompleted(object sender, EventArgs e) //cha
+    {
+        string text = ((Entry)sender).Text;
+        charisma = int.Parse(text);
+        playerCharacter.SetCharisma(charisma);
+    }
+
     //changes character's name
     void NameChanged(object sender, EventArgs e)
     {
@@ -65,10 +103,5 @@ public partial class CharacterCreatorPage : ContentPage
             }
                 
         }
-    }
-
-    void OnEntryCompleted(object sender, EventArgs e)
-    {
-        string text = ((Entry)sender).Text;
     }
 }

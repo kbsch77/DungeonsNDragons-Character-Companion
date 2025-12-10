@@ -3,100 +3,133 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DungeonsNDragons_Character_Companion.View.CharacterCreatorPage"
              Title="5e Character Creator">
-    <VerticalStackLayout>
-        <Label 
-            Text="Creation Meathod"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label 
+                Text="Creation Meathod"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
 
-        <Button
-            Text="Roll for Stats" 
-            SemanticProperties.Hint="Automatically roll for Stats"
-            Clicked="OnRollForStatsClicked" />
+            <Button
+                Text="Roll for Stats" 
+                SemanticProperties.Hint="Automatically roll for Stats"
+                Clicked="OnRollForStatsClicked" />
 
-        <Button
-            Text="Point Buy Stats" 
-            SemanticProperties.Hint="Increase and decrease Stats based on point system (Currently Work in Progress)"
-            Clicked="OnPointBuyClicked" />
+            <Button
+                Text="Point Buy Stats (Currently Work in Progress)" 
+                SemanticProperties.Hint="Increase and decrease Stats based on point system (Currently Work in Progress)"
+                Clicked="OnPointBuyClicked" />
 
-        <Label 
-            Text="Character Stats"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            <Label 
+                Text="Character Stats"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
 
+            <!-- Str -->
+            <Entry x:Name="StrEntry" 
+               Placeholder="Enter Strength Stat Number"
+               TextChanged="OnEntryTextChanged"
+               Completed="OnStrCompleted" />
+            <!-- Dex -->
+            <Entry x:Name="DexEntry"
+               Placeholder="Enter Dexterity Stat Number"
+               TextChanged="OnEntryTextChanged"
+               Completed="OnDexCompleted" />
+            <!-- Con -->
+            <Entry x:Name="ConEntry"
+               Placeholder="Enter Constitution Stat Number"
+               TextChanged="OnEntryTextChanged"
+               Completed="OnConCompleted" />
+            <!-- Int -->
+            <Entry x:Name="IntEntry"
+               Placeholder="Enter Intelligence Stat Number"
+               TextChanged="OnEntryTextChanged"
+               Completed="OnIntCompleted" />
+            <!-- Wis -->
+            <Entry x:Name="WisEntry"
+               Placeholder="Enter Wisdom Stat Number"
+               TextChanged="OnEntryTextChanged"
+               Completed="OnWisCompleted" />
+            <!-- Cha -->
+            <Entry x:Name="ChaEntry"
+               Placeholder="Enter Charisma Stat Number"
+               TextChanged="OnEntryTextChanged"
+               Completed="OnChaCompleted" />
 
-        <Entry x:Name="entry"
-           Placeholder="Enter text"
-           TextChanged="OnEntryTextChanged"
-           Completed="OnEntryCompleted" />
+            <Label 
+                Text="Character Skills"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
 
-        <Label 
-            Text="Character Skills"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            <Label 
+                Text="Character Class"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
 
-        <Label 
-            Text="Character Class"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            <Picker x:Name="ClassPicker"
+            Title="Select a Character Class">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Barbarian</x:String>
+                        <x:String>Bard</x:String>
+                        <x:String>Cleric</x:String>
+                        <x:String>Druid</x:String>
+                        <x:String>Fighter</x:String>
+                        <x:String>Monk</x:String>
+                        <x:String>Paladin</x:String>
+                        <x:String>Ranger</x:String>
+                        <x:String>Rouge</x:String>
+                        <x:String>Sorcerer</x:String>
+                        <x:String>Warlock</x:String>
+                        <x:String>Wizard</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
 
-        <Picker x:Name="ClassPicker"
-        Title="Select a Character Class">
-            <Picker.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>Barbarian</x:String>
-                    <x:String>Bard</x:String>
-                    <x:String>Cleric</x:String>
-                    <x:String>Druid</x:String>
-                    <x:String>Fighter</x:String>
-                    <x:String>Monk</x:String>
-                    <x:String>Paladin</x:String>
-                    <x:String>Ranger</x:String>
-                    <x:String>Rouge</x:String>
-                    <x:String>Sorcerer</x:String>
-                    <x:String>Warlock</x:String>
-                    <x:String>Wizard</x:String>
-                </x:Array>
-            </Picker.ItemsSource>
-        </Picker>
+            <Label 
+                Text="Character Background"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
 
-        <Label 
-            Text="Character Background"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            <Picker x:Name="BackgroundPicker"
+            Title="Select a Background">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Acolyte</x:String>
+                        <x:String>Charlatan</x:String>
+                        <x:String>Criminal / Spy</x:String>
+                        <x:String>Entertainer</x:String>
+                        <x:String>Folk Hero</x:String>
+                        <x:String>Gladiator</x:String>
+                        <x:String>Guild Artisan / Guild Merchant</x:String>
+                        <x:String>Hermit</x:String>
+                        <x:String>Knight</x:String>
+                        <x:String>Noble</x:String>
+                        <x:String>Outlander</x:String>
+                        <x:String>Pirate</x:String>
+                        <x:String>Sage</x:String>
+                        <x:String>Sailor</x:String>
+                        <x:String>Soldier</x:String>
+                        <x:String>Urchin</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
 
-        <Picker x:Name="BackgroundPicker"
-        Title="Select a Background">
-            <Picker.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>Acolyte</x:String>
-                    <x:String>Charlatan</x:String>
-                    <x:String>Criminal / Spy</x:String>
-                    <x:String>Entertainer</x:String>
-                    <x:String>Folk Hero</x:String>
-                    <x:String>Gladiator</x:String>
-                    <x:String>Guild Artisan / Guild Merchant</x:String>
-                    <x:String>Hermit</x:String>
-                    <x:String>Knight</x:String>
-                    <x:String>Noble</x:String>
-                    <x:String>Outlander</x:String>
-                    <x:String>Pirate</x:String>
-                    <x:String>Sage</x:String>
-                    <x:String>Sailor</x:String>
-                    <x:String>Soldier</x:String>
-                    <x:String>Urchin</x:String>
-                </x:Array>
-            </Picker.ItemsSource>
-        </Picker>
+            <Label 
+                Text="Character Name"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
 
-        <Label 
-            Text="Character Name"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            <Entry x:Name="entry"
+               Placeholder="Enter Character Name"
+               TextChanged="OnEntryTextChanged"
+               Completed="NameChanged" />
         
-        <Entry x:Name="CharacterNameEntry"
-           Placeholder="Character Name"
-           TextChanged="OnEntryTextChanged"
-           Completed="NameChanged" />
-    </VerticalStackLayout>
+            <!--
+            <Entry x:Name="CharacterNameEntry"
+               Placeholder="Character Name"
+               TextChanged="OnEntryTextChanged"
+               Completed="NameChanged" /> -->
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
