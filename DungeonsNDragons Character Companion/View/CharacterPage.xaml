@@ -11,5 +11,10 @@
             Text="Welcome to Character Sheet!"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+
+        <Button
+            Text="Edit Character" 
+            SemanticProperties.Hint="Edit Current Character"
+            Clicked="OnEditClicked" />
     </VerticalStackLayout>
 </ContentPage>

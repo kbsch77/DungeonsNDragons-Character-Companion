@@ -25,7 +25,9 @@
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" />
 
-            <!-- Str -->
+            <!-- Str (label work in progress)-->
+            <Label 
+                Text="{Binding strength}"/>
             <Entry x:Name="StrEntry" 
                Placeholder="Enter Strength Stat Number"
                TextChanged="OnEntryTextChanged"
@@ -124,12 +126,11 @@
                Placeholder="Enter Character Name"
                TextChanged="OnEntryTextChanged"
                Completed="NameChanged" />
-        
-            <!--
-            <Entry x:Name="CharacterNameEntry"
-               Placeholder="Character Name"
-               TextChanged="OnEntryTextChanged"
-               Completed="NameChanged" /> -->
+
+            <Button
+                Text="Save Character" 
+                SemanticProperties.Hint="Saves Character Edits"
+                Clicked="OnSaveClicked" />
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

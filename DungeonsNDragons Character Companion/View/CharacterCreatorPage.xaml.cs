@@ -4,7 +4,7 @@ namespace DungeonsNDragons_Character_Companion.View;
 
 public partial class CharacterCreatorPage : ContentPage
 {
-    Character playerCharacter = new Character("Test");
+    Character playerCharacter;
     string characterName = "";
     string characterClass;
     string characterbacground;
@@ -15,13 +15,20 @@ public partial class CharacterCreatorPage : ContentPage
     int wisdom;
     int charisma;
 
-    public CharacterCreatorPage()
-	{
-		InitializeComponent();
+    internal CharacterCreatorPage(Character character)
+    {
+        playerCharacter = character;
+        InitializeComponent();
     }
     private void OnRollForStatsClicked(object sender, EventArgs e)
     {
         playerCharacter = new Character(characterName);
+        strength = playerCharacter.GetStrength();
+        dexterity = playerCharacter.GetDexterity();
+        constitution = playerCharacter.GetConstitution();
+        intelligence = playerCharacter.GetIntelligence();
+        wisdom = playerCharacter.GetWisdom();
+        charisma = playerCharacter.GetCharisma();
     }
     private void OnPointBuyClicked(object sender, EventArgs e)
     {
@@ -83,7 +90,7 @@ public partial class CharacterCreatorPage : ContentPage
         playerCharacter.SetName(characterName);
     }
 
-    //picker index changes
+    //picker index changes 
     void OnPickerSelectedIndexChanged(object sender, EventArgs e)
     {
         var picker = (Picker)sender;
@@ -103,5 +110,9 @@ public partial class CharacterCreatorPage : ContentPage
             }
                 
         }
+    }
+    private async void OnSaveClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new View.CharacterPage(playerCharacter));
     }
 }
