@@ -1,10 +1,11 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using DungeonsNDragons_Character_Companion.View;
+using Microsoft.Extensions.Logging;
 
 namespace DungeonsNDragons_Character_Companion
 {
     public static class MauiProgram
     {
-        public static MauiApp CreateMauiApp()
+        public static object CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder();
             builder
@@ -17,6 +18,14 @@ namespace DungeonsNDragons_Character_Companion
 
 #if DEBUG
     		builder.Logging.AddDebug();
+
+            builder.Services.AddSingleton<MainPage>();
+
+            builder.Services.AddSingleton<CharacterViewModel>();
+
+            builder.Services.AddSingleton<CharacterPage>();
+
+            builder.Services.AddSingleton<CharacterCreatorPage>();
 #endif
 
             return builder.Build();

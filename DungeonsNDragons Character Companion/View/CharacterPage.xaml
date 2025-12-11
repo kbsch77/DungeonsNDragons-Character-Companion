@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:DungeonsNDragons_Character_Companion.ViewModel"
+             x:DataType="viewmodel:CharacterViewModel"
              x:Class="DungeonsNDragons_Character_Companion.View.CharacterPage"
              Title="{Binding Title}">
+    
     <VerticalStackLayout>
         <Label 
             Text="Welcome to Character Sheet!"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+
+        <Button
+            Text="Edit Character" 
+            SemanticProperties.Hint="Edit Current Character"
+            Clicked="OnEditClicked" />
     </VerticalStackLayout>
 </ContentPage>

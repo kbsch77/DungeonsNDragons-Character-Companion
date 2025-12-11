@@ -24,6 +24,11 @@
                 Text="Create New Character" 
                 SemanticProperties.Hint="Create a new DnD 5e Character"
                 Clicked="OnCharacterCreatorClicked" />
+
+            <Button
+                Text="Load a Character (Work in progress)" 
+                SemanticProperties.Hint="Load a DnD 5e Character"
+                Clicked="OnLoadCharacterClicked" />
         </VerticalStackLayout>
     </ScrollView>
     

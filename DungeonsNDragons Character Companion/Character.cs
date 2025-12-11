@@ -1,13 +1,50 @@
 internal class Character
 {
+    //Character Bio
+    private string _name;
+    private int _level = 1;
+    private string _class;
+    private string _background;
+
+    //stats
     private int _strength;
     private int _dexterity;
     private int _constitution;
     private int _intelligence;
     private int _wisdom;
     private int _charisma;
-    private string _name;
-    private int _level = 1;
+
+    //saving throws
+    public int _strengthSave;
+    public int _dexteritySave;
+    public int _constitutionSave;
+    public int _intelligenceSave;
+    public int _wisdomSave;
+    public int _charismaSave;
+
+    //str
+    public int _athletics;
+    //dex
+    public int _acrobatics;
+    public int _sleightOfHand;
+    public int _stealth;
+    //int
+    public int _arcana;
+    public int _history;
+    public int _investigation;
+    public int _nature;
+    public int _religion;
+    //wis
+    public int _animalHandling;
+    public int _insight;
+    public int _medicine;
+    public int _perception;
+    public int _survival;
+    //cha
+    public int _deception;
+    public int _intimidation;
+    public int _performance;
+    public int _persuasion;
 
     public Character(string name)
     {
@@ -96,40 +133,78 @@ internal class Character
     {
         return _name;
     }
+    public void SetClass(string characterClass)
+    {
+        _class = characterClass;
+    }
+    public string GetClass()
+    {
+        return _class;
+    }
+    public void SetBackground(string background)
+    {
+        _background = background;
+    }
+    public string GetBackground() 
+    { 
+        return _background; 
+    }
     public void SetLevel(int level = 1)
     {
         _level = level;
-
     }
     public int GetLevel()
     {
         return _level;
     }
+    public void SetStrength(int strength)
+    {
+        _strength = strength;
+    }
     public int GetStrength()
     {
         return _strength;
+    }
+    public void SetDexterity(int dexterity)
+    {
+        _dexterity = dexterity;
     }
     public int GetDexterity()
     {
         return _dexterity;
     }
+    public void SetConstitution(int constitution) 
+    { 
+        _constitution = constitution;
+    }
     public int GetConstitution()
     {
         return _constitution;
+    }
+    public void SetIntelligence(int intelligence)
+    {
+        _intelligence = intelligence;
     }
     public int GetIntelligence()
     {
         return _intelligence;
     }
+    public void SetWisdom(int wisdom)
+    {
+        _wisdom = wisdom;
+    }
     public int GetWisdom()
     {
         return _wisdom;
+    }
+    public void SetCharisma(int charisma)
+    {
+        _charisma = charisma;
     }
     public int GetCharisma()
     {
         return _charisma;
     }
-
 
     //Technical Difficulties
     public virtual MeleeWeapons GetMeleeWeapon()
