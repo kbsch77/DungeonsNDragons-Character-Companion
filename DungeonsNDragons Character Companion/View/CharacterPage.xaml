@@ -6,15 +6,52 @@
              x:Class="DungeonsNDragons_Character_Companion.View.CharacterPage"
              Title="{Binding Title}">
     
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to Character Sheet!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label x:Name="CharacterName" Text="" />
+            <Label x:Name="CharacterClass" Text="" />
+            <Label x:Name="CharacterBackground" Text="" />
 
-        <Button
-            Text="Edit Character" 
-            SemanticProperties.Hint="Edit Current Character"
-            Clicked="OnEditClicked" />
-    </VerticalStackLayout>
+            <Label x:Name="StrLabel" Text="" />
+            <Label x:Name="DexLabel" Text="" />
+            <Label x:Name="ConLabel" Text="" />
+            <Label x:Name="IntLabel" Text="" />
+            <Label x:Name="WisLabel" Text="" />
+            <Label x:Name="ChaLabel" Text="" />
+
+            <Label Text="Saving Throws" />
+            <Label x:Name="StrSaveLabel" Text="" />
+            <Label x:Name="DexSaveLabel" Text="" />
+            <Label x:Name="ConSaveLabel" Text="" />
+            <Label x:Name="IntSaveLabel" Text="" />
+            <Label x:Name="WisSaveLabel" Text="" />
+            <Label x:Name="ChaSaveLabel" Text="" />
+
+            <Label Text="Abilities" />
+            <Label x:Name="AcrobaticsLabel" Text="" />
+            <Label x:Name="AnimalHandlingLabel" Text="" />
+            <Label x:Name="ArcanaLabel" Text="" />
+            <Label x:Name="AthleticsLabel" Text="" />
+            <Label x:Name="DeceptionLabel" Text="" />
+            <Label x:Name="HistoryLabel" Text="" />
+            <Label x:Name="InsightLabel" Text="" />
+            <Label x:Name="IntimidationLabel" Text="" />
+            <Label x:Name="InvestigationLabel" Text="" />
+            <Label x:Name="MedicineLabel" Text="" />
+            <Label x:Name="NatureLabel" Text="" />
+            <Label x:Name="PerceptionLabel" Text="" />
+            <Label x:Name="PerformanceLabel" Text="" />
+            <Label x:Name="PersuasionLabel" Text="" />
+            <Label x:Name="ReligionLabel" Text="" />
+            <Label x:Name="SleightOfHandLabel" Text="" />
+            <Label x:Name="StealthLabel" Text="" />
+            <Label x:Name="SurvivalLabel" Text="" />
+
+            <Button
+                Text="Edit Character" 
+                SemanticProperties.Hint="Edit Current Character"
+                Clicked="OnEditClicked" />
+            
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

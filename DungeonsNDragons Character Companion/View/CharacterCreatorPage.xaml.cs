@@ -19,6 +19,18 @@ public partial class CharacterCreatorPage : ContentPage
     {
         playerCharacter = character;
         InitializeComponent();
+
+        UpdateStats();
+    }
+
+    private void UpdateStats()
+    {
+        StrLabel.Text = $"Strength: {Convert.ToString(playerCharacter.GetStrength())}";
+        DexLabel.Text = $"Dexterity: {Convert.ToString(playerCharacter.GetDexterity())}";
+        ConLabel.Text = $"Constitution: {Convert.ToString(playerCharacter.GetConstitution())}";
+        IntLabel.Text = $"Intelligence: {Convert.ToString(playerCharacter.GetIntelligence())}";
+        WisLabel.Text = $"Wisdom: {Convert.ToString(playerCharacter.GetWisdom())}";
+        ChaLabel.Text = $"Charisma: {Convert.ToString(playerCharacter.GetCharisma())}";
     }
     private void OnRollForStatsClicked(object sender, EventArgs e)
     {
@@ -29,11 +41,13 @@ public partial class CharacterCreatorPage : ContentPage
         intelligence = playerCharacter.GetIntelligence();
         wisdom = playerCharacter.GetWisdom();
         charisma = playerCharacter.GetCharisma();
+
+        UpdateStats();
     }
     private void OnPointBuyClicked(object sender, EventArgs e)
     {
-        //currently same as rolled stats, work in progress
-        playerCharacter = new Character(characterName);
+        //work in progress
+        //playerCharacter = new Character(characterName);
     }
 
     // entry text changes
@@ -50,36 +64,42 @@ public partial class CharacterCreatorPage : ContentPage
         string text = ((Entry)sender).Text;
         strength = int.Parse(text);
         playerCharacter.SetStrength(strength);
+        StrLabel.Text = $"Strength: {text}";
     }
     void OnDexCompleted(object sender, EventArgs e) //dex
     {
         string text = ((Entry)sender).Text;
         dexterity = int.Parse(text);
         playerCharacter.SetDexterity(dexterity);
+        DexLabel.Text = $"Dexterity: {text}";
     }
     void OnConCompleted(object sender, EventArgs e) //con
     {
         string text = ((Entry)sender).Text;
         constitution = int.Parse(text);
         playerCharacter.SetConstitution(constitution);
+        ConLabel.Text = $"Constitution: {text}";
     }
     void OnIntCompleted(object sender, EventArgs e) //int
     {
         string text = ((Entry)sender).Text;
         intelligence = int.Parse(text);
         playerCharacter.SetIntelligence(intelligence);
+        IntLabel.Text = $"Intelligence: {text}";
     }
     void OnWisCompleted(object sender, EventArgs e) //wis
     {
         string text = ((Entry)sender).Text;
         wisdom = int.Parse(text);
         playerCharacter.SetWisdom(wisdom);
+        WisLabel.Text = $"Wisdom: {text}";
     }
     void OnChaCompleted(object sender, EventArgs e) //cha
     {
         string text = ((Entry)sender).Text;
         charisma = int.Parse(text);
         playerCharacter.SetCharisma(charisma);
+        ChaLabel.Text = $"Charisma: {text}";
     }
 
     //changes character's name

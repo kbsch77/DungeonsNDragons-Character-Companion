@@ -25,34 +25,44 @@
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" />
 
-            <!-- Str (label work in progress)-->
-            <Label 
-                Text="{Binding strength}"/>
+            <!-- Str -->
+            <Label x:Name="StrLabel"
+                Text=""/>
             <Entry x:Name="StrEntry" 
                Placeholder="Enter Strength Stat Number"
                TextChanged="OnEntryTextChanged"
                Completed="OnStrCompleted" />
             <!-- Dex -->
+            <Label x:Name="DexLabel"
+                Text=""/>
             <Entry x:Name="DexEntry"
                Placeholder="Enter Dexterity Stat Number"
                TextChanged="OnEntryTextChanged"
                Completed="OnDexCompleted" />
             <!-- Con -->
+            <Label x:Name="ConLabel"
+                Text=""/>
             <Entry x:Name="ConEntry"
                Placeholder="Enter Constitution Stat Number"
                TextChanged="OnEntryTextChanged"
                Completed="OnConCompleted" />
             <!-- Int -->
+            <Label x:Name="IntLabel"
+                Text=""/>
             <Entry x:Name="IntEntry"
                Placeholder="Enter Intelligence Stat Number"
                TextChanged="OnEntryTextChanged"
                Completed="OnIntCompleted" />
             <!-- Wis -->
+            <Label x:Name="WisLabel"
+                Text=""/>
             <Entry x:Name="WisEntry"
                Placeholder="Enter Wisdom Stat Number"
                TextChanged="OnEntryTextChanged"
                Completed="OnWisCompleted" />
             <!-- Cha -->
+            <Label x:Name="ChaLabel"
+                Text=""/>
             <Entry x:Name="ChaEntry"
                Placeholder="Enter Charisma Stat Number"
                TextChanged="OnEntryTextChanged"
