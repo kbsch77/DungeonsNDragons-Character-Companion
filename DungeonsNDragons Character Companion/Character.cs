@@ -7,12 +7,12 @@ internal class Character
     private string _background;
 
     //stats
-    private int _strength;
-    private int _dexterity;
-    private int _constitution;
-    private int _intelligence;
-    private int _wisdom;
-    private int _charisma;
+    private int _strength = 0;
+    private int _dexterity = 0;
+    private int _constitution = 0;
+    private int _intelligence = 0;
+    private int _wisdom = 0;
+    private int _charisma = 0;
 
     //saving throws
     public int _strengthSave;
@@ -56,6 +56,32 @@ internal class Character
         _intelligence = dice.RollStat();
         _wisdom = dice.RollStat();
         _charisma = dice.RollStat();
+
+        _strengthSave = ModifyStats("str");
+        _dexteritySave = ModifyStats("dex");
+        _constitutionSave = ModifyStats("con");
+        _intelligenceSave = ModifyStats("int");
+        _wisdomSave = ModifyStats("wis");
+        _charismaSave = ModifyStats("cha");
+
+        _athletics = ModifyStats("str");
+        _acrobatics = ModifyStats("dex");
+        _sleightOfHand = ModifyStats("dex");
+        _stealth = ModifyStats("dex");
+        _arcana = ModifyStats("int");
+        _history = ModifyStats("int");
+        _investigation = ModifyStats("int");
+        _nature = ModifyStats("int");
+        _religion = ModifyStats("int");
+        _animalHandling = ModifyStats("wis");
+        _insight = ModifyStats("wis");
+        _medicine = ModifyStats("wis");
+        _perception = ModifyStats("wis");
+        _survival = ModifyStats("wis");
+        _deception = ModifyStats("cha");
+        _intimidation = ModifyStats("cha");
+        _performance = ModifyStats("cha");
+        _persuasion = ModifyStats("cha");
     }
     public Character(string name, int strength = 1, int dexterity = 1, int constitution = 1, int intelligence = 1, int wisdom = 1, int charisma = 1)
     {
@@ -68,22 +94,22 @@ internal class Character
         _charisma = charisma;
     }
 
-    public int ModifyStats(string attribute)
+    public int ModifyStats(string attribute) //enter str, dex, con, int, wis, & cha
     {
         int modifyer;
         int stat = 0;
 
-        if (attribute == "strength")
+        if (attribute == "str")
             stat = _strength;
-        else if (attribute == "dexterity")
+        else if (attribute == "dex")
             stat = _dexterity;
-        else if (attribute == "constitution")
+        else if (attribute == "con")
             stat = _constitution;
-        else if (attribute == "intelligence")
+        else if (attribute == "int")
             stat = _intelligence;
-        else if (attribute == "wisdom")
+        else if (attribute == "wis")
             stat = _wisdom;
-        else if (attribute == "charisma")
+        else if (attribute == "cha")
             stat = _charisma;
 
         if (stat == 30)
@@ -160,6 +186,8 @@ internal class Character
     public void SetStrength(int strength)
     {
         _strength = strength;
+        _strengthSave = ModifyStats("str");
+        _athletics = ModifyStats("str");
     }
     public int GetStrength()
     {
@@ -168,6 +196,10 @@ internal class Character
     public void SetDexterity(int dexterity)
     {
         _dexterity = dexterity;
+        _dexteritySave = ModifyStats("dex");
+        _acrobatics = ModifyStats("dex");
+        _sleightOfHand = ModifyStats("dex");
+        _stealth = ModifyStats("dex");
     }
     public int GetDexterity()
     {
@@ -176,6 +208,7 @@ internal class Character
     public void SetConstitution(int constitution) 
     { 
         _constitution = constitution;
+        _constitutionSave = ModifyStats("con");
     }
     public int GetConstitution()
     {
@@ -184,6 +217,12 @@ internal class Character
     public void SetIntelligence(int intelligence)
     {
         _intelligence = intelligence;
+        _intelligenceSave = ModifyStats("int");
+        _arcana = ModifyStats("int");
+        _history = ModifyStats("int");
+        _investigation = ModifyStats("int");
+        _nature = ModifyStats("int");
+        _religion = ModifyStats("int");
     }
     public int GetIntelligence()
     {
@@ -192,6 +231,12 @@ internal class Character
     public void SetWisdom(int wisdom)
     {
         _wisdom = wisdom;
+        _wisdomSave = ModifyStats("wis");
+        _animalHandling = ModifyStats("wis");
+        _insight = ModifyStats("wis");
+        _medicine = ModifyStats("wis");
+        _perception = ModifyStats("wis");
+        _survival = ModifyStats("wis");
     }
     public int GetWisdom()
     {
@@ -200,6 +245,11 @@ internal class Character
     public void SetCharisma(int charisma)
     {
         _charisma = charisma;
+        _charismaSave = ModifyStats("cha");
+        _deception = ModifyStats("cha");
+        _intimidation = ModifyStats("cha");
+        _performance = ModifyStats("cha");
+        _persuasion = ModifyStats("cha");
     }
     public int GetCharisma()
     {
