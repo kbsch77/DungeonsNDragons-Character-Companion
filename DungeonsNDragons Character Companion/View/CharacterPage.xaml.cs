@@ -19,7 +19,7 @@ public partial class CharacterPage : ContentPage
     private void SetCharacterValues()
     {
         CharacterName.Text = character.GetName();
-        CharacterClass.Text = character.GetClass();
+        CharacterClass.Text = character.GetClass() + " " + Convert.ToString(character.GetLevel());
         CharacterBackground.Text = character.GetBackground();
 
         StrLabel.Text = $"Strength: {Convert.ToString(character.GetStrength())}";

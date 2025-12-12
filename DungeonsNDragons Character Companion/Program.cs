@@ -40,7 +40,7 @@ internal class OldProgram
             {
                 Console.Write("Enter the character's name: ");
                 characterName = Console.ReadLine();
-                records.LoadCharacter(characterName);
+                //records.LoadCharacter(characterName);
 
                 endLoop = true;
             }
@@ -281,7 +281,7 @@ internal class OldProgram
             //Save Character and it's Equippment
             else if (playerChoice == "3")
             {
-                records.SaveCharacter(playerCharacter, characterName);
+                //records.SaveCharacter(playerCharacter, characterName);
             }
 
             //Shows Character Information

@@ -12,6 +12,7 @@
             <Label x:Name="CharacterClass" Text="" />
             <Label x:Name="CharacterBackground" Text="" />
 
+            <Label Text="" />
             <Label x:Name="StrLabel" Text="" />
             <Label x:Name="DexLabel" Text="" />
             <Label x:Name="ConLabel" Text="" />
@@ -19,6 +20,7 @@
             <Label x:Name="WisLabel" Text="" />
             <Label x:Name="ChaLabel" Text="" />
 
+            <Label Text="" />
             <Label Text="Saving Throws" />
             <Label x:Name="StrSaveLabel" Text="" />
             <Label x:Name="DexSaveLabel" Text="" />
@@ -27,6 +29,7 @@
             <Label x:Name="WisSaveLabel" Text="" />
             <Label x:Name="ChaSaveLabel" Text="" />
 
+            <Label Text="" />
             <Label Text="Abilities" />
             <Label x:Name="AcrobaticsLabel" Text="" />
             <Label x:Name="AnimalHandlingLabel" Text="" />
