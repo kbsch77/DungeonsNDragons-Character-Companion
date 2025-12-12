@@ -25,6 +25,14 @@
                 SemanticProperties.Hint="Create a new DnD 5e Character"
                 Clicked="OnCharacterCreatorClicked" />
 
+            <Label
+                Text="Enter the name of the character that you want loaded:" />
+            
+            <Entry x:Name="entry"
+               Placeholder="Enter Character Name"
+               TextChanged="OnEntryTextChanged"
+               Completed="NameChanged" />
+
             <Button
                 Text="Load a Character (Work in progress)" 
                 SemanticProperties.Hint="Load a DnD 5e Character"

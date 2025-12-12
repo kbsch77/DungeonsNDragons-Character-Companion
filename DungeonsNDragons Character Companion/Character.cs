@@ -257,15 +257,15 @@ internal class Character
     }
 
     //Technical Difficulties
-    public virtual MeleeWeapons GetMeleeWeapon()
+    public virtual MeleeWeapons? GetMeleeWeapon()
     {
         return null;
     }
-    public virtual RangedWeapons GetRangedWeapon()
+    public virtual RangedWeapons? GetRangedWeapon()
     {
         return null;
     }
-    public virtual Armors GetArmor()
+    public virtual Armors? GetArmor()
     {
         return null;
     }

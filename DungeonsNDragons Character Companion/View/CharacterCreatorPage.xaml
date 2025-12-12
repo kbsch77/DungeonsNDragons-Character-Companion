@@ -68,10 +68,10 @@
                TextChanged="OnEntryTextChanged"
                Completed="OnChaCompleted" />
 
-            <Label 
+            <!--  <Label 
                 Text="Character Skills"
                 VerticalOptions="Center" 
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center" /> -->
 
             <Label 
                 Text="Character Class"

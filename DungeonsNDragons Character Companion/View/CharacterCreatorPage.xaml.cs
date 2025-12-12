@@ -1,3 +1,4 @@
+using System.Text.Json;
 using Microsoft.Maui.Controls;
 
 namespace DungeonsNDragons_Character_Companion.View;
@@ -133,6 +134,15 @@ public partial class CharacterCreatorPage : ContentPage
     }
     private async void OnSaveClicked(object sender, EventArgs e)
     {
+        //create json file named after the character
+        string filename = FileSystem.AppDataDirectory + $"/{characterName}.json";
+        SaveCharacter(filename);
         await Navigation.PushAsync(new View.CharacterPage(playerCharacter));
+    }
+
+    private async void SaveCharacter(string fileName)
+    {
+        var writedata = JsonSerializer.Serialize(playerCharacter);
+        File.WriteAllText(fileName, writedata);
     }
 }
