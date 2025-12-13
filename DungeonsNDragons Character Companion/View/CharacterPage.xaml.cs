@@ -60,4 +60,9 @@ public partial class CharacterPage : ContentPage
     {
         await Navigation.PushAsync(new View.CharacterCreatorPage(character));
     }
+
+    private async void OnDeleteClicked(object sender, EventArgs e)
+    {
+        return;
+    }
 }

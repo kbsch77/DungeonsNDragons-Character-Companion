@@ -28,9 +28,9 @@ namespace DungeonsNDragons_Character_Companion
             string myText = entry.Text;
         }
 
-        //changes character's name
         void NameChanged(object sender, EventArgs e)
         {
+            //changes character's name
             string text = ((Entry)sender).Text;
             characterName = text;
         }
@@ -44,15 +44,34 @@ namespace DungeonsNDragons_Character_Companion
         }
         private async void LoadCharacter(string fileName)
         {
-            if (File.Exists(fileName) == false)
+            //Json Deserialization
+            Character readCharacter = new Character("");
+            try
             {
-                //no file
+                if (File.Exists(fileName) == false)
+                {
+                    //no file
+                    return;
+                }
+                var json = File.ReadAllText(fileName);
+                readCharacter = JsonSerializer.Deserialize<Character>(json);
+
+                playerCharacter.SetName(readCharacter.GetName());
+                playerCharacter.SetClass(readCharacter.GetClass());
+                playerCharacter.SetBackground(readCharacter.GetBackground());
+                playerCharacter.SetLevel(readCharacter.GetLevel());
+                playerCharacter.SetStrength(readCharacter.GetStrength());
+                playerCharacter.SetDexterity(readCharacter.GetDexterity());
+                playerCharacter.SetConstitution(readCharacter.GetConstitution());
+                playerCharacter.SetIntelligence(readCharacter.GetIntelligence());
+                playerCharacter.SetWisdom(readCharacter.GetWisdom());
+                playerCharacter.SetCharisma(readCharacter.GetCharisma());
+            }
+            catch (Exception ex) 
+            { 
                 return;
             }
-            var rawData = File.ReadAllText(fileName);
-            Character readCharacter = JsonSerializer.Deserialize<Character>(rawData);
-
-            playerCharacter = readCharacter;
+            
         }
     }
 }

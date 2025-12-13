@@ -1,4 +1,5 @@
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using Microsoft.Maui.Controls;
 
 namespace DungeonsNDragons_Character_Companion.View;
@@ -142,7 +143,15 @@ public partial class CharacterCreatorPage : ContentPage
 
     private async void SaveCharacter(string fileName)
     {
-        var writedata = JsonSerializer.Serialize(playerCharacter);
-        File.WriteAllText(fileName, writedata);
+        // Json Serialization
+        try
+        {
+            var json = JsonSerializer.Serialize(playerCharacter); //SerializeObject(playerCharacter);
+            File.WriteAllText(fileName, json);
+        }
+        catch 
+        {
+            return;
+        }
     }
 }
