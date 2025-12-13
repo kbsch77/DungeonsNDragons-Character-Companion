@@ -54,7 +54,12 @@
                 Text="Edit Character" 
                 SemanticProperties.Hint="Edit Current Character"
                 Clicked="OnEditClicked" />
-            
+
+            <Button
+                Text="Delete Character (Work In Progress)" 
+                SemanticProperties.Hint="Edit Current Character"
+                Clicked="OnDeleteClicked" />
+
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

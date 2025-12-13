@@ -1,10 +1,10 @@
-internal class Character
+internal class Character 
 {
     //Character Bio
     private string _name;
     private int _level = 1;
-    private string _class;
-    private string _background;
+    private string _class = "Fighter";
+    private string _background = "Soldier";
 
     //stats
     private int _strength = 0;
