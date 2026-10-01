@@ -11,6 +11,7 @@ namespace DungeonsNDragons_Character_Companion.Model
         //basic character info
         public string _name = "";
         public string _class = "";
+        public string _race = "";
         public string _background = "";
         public int _level = 1;
 
